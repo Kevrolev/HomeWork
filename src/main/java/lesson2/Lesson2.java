@@ -12,11 +12,22 @@ public class Lesson2 {
         int a = 10;
         int b = 15;
         boolean Value;
+        String string = "Молоко";
 
         firstTask(a, b);
         secondTask(a);
         Value = thirdTask(a);
         System.out.println("Результатом выполнение 3 задачи = "+Value);
+        fourthTask(a,string);
+    }
+
+    private static void fourthTask(int a, String string) {
+        String word = "";
+        //int i;
+        for (int i = 1; i <= a; i++){
+            word = word +" "+ string;
+        }
+        System.out.println(word);
     }
 
     private static Boolean thirdTask(int a) {
