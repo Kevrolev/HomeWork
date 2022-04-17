@@ -21,77 +21,20 @@ public class Lesson2 {
         fourthTask(a,string);
 
         int Year = 0;
-        leapYear(Year);
+        Value = leapYear(2022);
+        if (Value == true){
+            System.out.println("Год высокостный");
+        } else { System.out.println("Год не является высокостным");}
+
     }
 
     private static Boolean leapYear(int Year) {
+        System.out.println("Решение 5 задачи.");
         if (Year % 400 == 0) {return true;}
 
         if (Year % 100 == 0) {return false;
-        }else if (Year % 4 == 00) {return true;}
+        }else if (Year % 4 == 0) {return true;}
         else  return false;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     private static void fourthTask(int a, String string) {
