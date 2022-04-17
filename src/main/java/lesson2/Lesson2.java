@@ -19,6 +19,79 @@ public class Lesson2 {
         Value = thirdTask(a);
         System.out.println("Результатом выполнение 3 задачи = "+Value);
         fourthTask(a,string);
+
+        int Year = 0;
+        leapYear(Year);
+    }
+
+    private static Boolean leapYear(int Year) {
+        if (Year % 400 == 0) {return true;}
+
+        if (Year % 100 == 0) {return false;
+        }else if (Year % 4 == 00) {return true;}
+        else  return false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     private static void fourthTask(int a, String string) {
