@@ -11,6 +11,7 @@ public class ArrayHomeWork {
         // 5. ** Задать одномерный массив и найти в нем минимальный и максимальный элементы (без помощи интернета);
         // 6. ** Написать метод, в который передается не пустой одномерный целочисленный массив, метод должен вернуть true, если в массиве есть место, в котором сумма левой и правой части массива равны. Примеры: checkBalance([2, 2, 2, 1, 2, 2, || 10, 1]) → true, checkBalance([1, 1, 1, || 2, 1]) → true, граница показана символами ||, эти символы в массив не входят.
         //7. **** Написать метод, которому на вход подается одномерный массив и число n (может быть положительным, или отрицательным), при этом метод должен сместить все элементы массива на n позиций. Элементы смещаются циклично. Для усложнения задачи нельзя пользоваться вспомогательными массивами. Примеры: [ 1, 2, 3 ] при n = 1 (на один вправо)-> [ 3, 1, 2 ]; [ 3, 5, 6, 1] при n =-2 (на два влево)-> [ 6, 1, 3, 5 ]. При каком n в какую сторону сдвиг можете выбирать сами.
+
         System.out.println("Решение первого задания, второго урока, второй методички про массивы");
         int LengthArray = 10;
         int[] array;
@@ -47,6 +48,38 @@ public class ArrayHomeWork {
 
         } else System.out.println("В массиве не встречаються равные части");
 
+        System.out.println("Решение 7 задачи");
+
+        int shift = 0;
+      array =  arrayShift(array, shift);
+
+    }
+
+    private static int[] arrayShift(int[] array, int shift) {
+        int arraySh = 0;
+        if (shift == 0) {
+            return array;
+        } else if (shift > 0) {
+            for (int i = 0; i < shift; i++) {
+                int variableArr = array[array.length];
+                for (int j = 0; j < array.length; j++) {
+                    arraySh = array[i];
+                    array[i] = variableArr;
+                    variableArr = arraySh;
+                }
+            }
+            return array;
+        } else if (shift < 0) {
+            for (int i = 0; i < shift * (-1); i++) {
+                int variableArr = array[0];
+                for (int j = array.length; j == 0; j--) {
+                    arraySh = array[i];
+                    array[i] = variableArr;
+                    variableArr = arraySh;
+                }
+            }
+        }
+        return array;
     }
 
     private static boolean evennessHalvesArray(int[] array) {
